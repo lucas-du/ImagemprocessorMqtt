@@ -14,14 +14,14 @@ public final class MqttConstants {
 	public static final String TCPIMAGEM = "imagem/test";
 	
 	
-	public final static String getStringImagem(String file){
+	public final static String getStringImagem(String file, String Matricula){
 		
 		Imagem img = new Imagem();
 		
 		String imgString = null;
 		
 		try {
-			imgString =img.Conversor(file);
+			imgString =img.Conversor(file,Matricula);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

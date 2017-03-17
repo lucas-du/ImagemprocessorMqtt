@@ -26,7 +26,7 @@ public class Publisher {
 			
 			MqttTopic topic = client.getTopic(MqttConstants.TCPIMAGEM);
 			
-			MqttMessage message = new MqttMessage(MqttConstants.getStringImagem(foto).getBytes());
+			MqttMessage message = new MqttMessage(MqttConstants.getStringImagem(foto, Matricula).getBytes());
 			
 			
 			
