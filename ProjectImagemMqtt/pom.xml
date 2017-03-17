@@ -17,19 +17,26 @@
     </plugins>
   </build>
   <dependencies>
-		<!-- https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3 -->
-		<dependency>
-			<groupId>org.eclipse.paho</groupId>
-			<artifactId>org.eclipse.paho.client.mqttv3</artifactId>
-			<version>1.1.0</version>
-		</dependency>
+	<!-- https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3 -->
+	<dependency>
+		<groupId>org.eclipse.paho</groupId>
+		<artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+		<version>1.1.0</version>
+	</dependency>
 
-		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.10</version>
-		</dependency>
-	</dependencies>
+	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+	<dependency>
+		<groupId>commons-codec</groupId>
+		<artifactId>commons-codec</artifactId>
+		<version>1.10</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.github.sarxos/webcam-capture -->
+	<dependency>
+		<groupId>com.github.sarxos</groupId>
+		<artifactId>webcam-capture</artifactId>
+		<version>0.3.11</version>
+	</dependency>
+</dependencies>
   
 </project>

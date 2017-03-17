@@ -5,11 +5,13 @@ import org.eclipse.paho.client.mqttv3.MqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttTopic;
 
+import br.edu.ifpb.imagem.CapImagem;
+
 
 
 public class Publisher {
 	
-	public void publisherenviar(String file){
+	public void publisherenviar(String Matricula){
 		
 		try {
 			
@@ -17,9 +19,16 @@ public class Publisher {
 			
 			client.connect();
 			
+			//Inciando a captura de imagem
+			CapImagem cap = new CapImagem();
+			
+			String foto = cap.takephoto(MqttConstants.FILE, Matricula);
+			
 			MqttTopic topic = client.getTopic(MqttConstants.TCPIMAGEM);
 			
-			MqttMessage message = new MqttMessage(MqttConstants.getStringImagem(file).getBytes());
+			MqttMessage message = new MqttMessage(MqttConstants.getStringImagem(foto).getBytes());
+			
+			
 			
 			message.setQos(MqttConstants.QOS2);
 			
